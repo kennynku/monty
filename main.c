@@ -19,13 +19,13 @@ int main(int argc, char **argv)
 	if (argc != 2 || !argv[1])
 		usage_error();
 	stack_val.qu = 0; /*  default to stack mode */
-/* open requested Monty ByteCode file */
+	/* open requested Monty ByteCode file */
 	stack_val.file = argv[1];
 	file_ptr = fopen(stack_val.file, "r");
 	if (!file_ptr)
-/* file open error */
+	/* file open error */
 		file_error();
-/* read each line, store values into buffer and execute op-function */
+	/* read each line, store values into buffer and execute op-function */
 	while ((bytes_read = getline(&line_buf, &buf_size, file_ptr)) != -1)
 	{
 		line_number++;
@@ -33,11 +33,11 @@ int main(int argc, char **argv)
 
 		if (tokens > 2)
 		{
-/* usage error */
+	/* usage error */
 			free(line_buf);
 			usage_error();
 		}
-/* line buffer transfered line read */
+	/* line buffer transfered line read */
 		free(line_buf);
 		line_buf = NULL;
 		stack_val.opcode = op_buf;
