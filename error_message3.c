@@ -12,6 +12,7 @@ void char_error(stack_t **stack, unsigned int line_number)
 	free_stack(stack);
 	exit(EXIT_FAILURE);
 }
+
 /**
  *sub_error- handles error for mon_sub
  *@stack: a ptr to head node

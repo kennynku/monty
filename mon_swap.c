@@ -5,8 +5,10 @@
  * @head: double pointer to head node
  * @line_number: line number being interpreted from Monty file
  *
- * Return: nothing, exit with code EXIT_FAILURE on failure
+ * Description: The result is stored in 2nd top element, top element is removed
+ * Return: nothing
  */
+
 void mon_swap(stack_t **head, unsigned int line_number)
 {
 	int temp_n;

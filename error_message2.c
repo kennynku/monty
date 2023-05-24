@@ -8,6 +8,7 @@
  *
  * Return: nothing
  */
+
 void div_error(stack_t **stack, unsigned int line_number)
 {
 	fprintf(stderr, "L%d: can't div, stack too short\n", line_number);
@@ -27,6 +28,7 @@ void zero_error(stack_t **stack, unsigned int line_number)
 	free_stack(stack);
 	exit(EXIT_FAILURE);
 }
+
 /**
  * mul_error - mon_mul error handling program
  * @stack: double pointer to head node
@@ -40,6 +42,7 @@ void mul_error(stack_t **stack, unsigned int line_number)
 	free_stack(stack);
 	exit(EXIT_FAILURE);
 }
+
 /**
  * mod_error - handles error for mon_mod function
  * @stack: a  pointer to head node
@@ -52,6 +55,7 @@ void mod_error(stack_t **stack, unsigned int line_number)
 	free_stack(stack);
 	exit(EXIT_FAILURE);
 }
+
 /**
  * pchar_error - handles stack error for oP_char
  * @stack: a pointer to head node
@@ -64,4 +68,3 @@ void pchar_error(stack_t **stack, unsigned int line_number)
 	free_stack(stack);
 	exit(EXIT_FAILURE);
 }
-

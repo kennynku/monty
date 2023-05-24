@@ -1,10 +1,12 @@
 #include "monty.h"
 /**
- * get_op_func- searches instruction for opcode functions
- * @str: opcode to search for
- * Return: ptr to the desired function otherwise opcode_error
+ * get_mon_func- searches instruction for moncode functions
+ * @str: moncode to search for
+ *
+ * Return: ptr to the desired function otherwise moncode_error
  */
-void (*get_op_func(char *str))(stack_t **, unsigned int)
+ 
+void (*get_mon_func(char *str))(stack_t **, unsigned int)
 {
 	instruction_t instructions[] = {
 		{"push", mon_push},
@@ -24,12 +26,12 @@ void (*get_op_func(char *str))(stack_t **, unsigned int)
 	};
 	int idx = 0;
 
-	while (instructions[idx].opcode)
+	while (instructions[idx].moncode)
 	{
-		if (strcmp(instructions[idx].opcode, str) == 0)
+		if (strcmp(instructions[idx].moncode, str) == 0)
 			return (instructions[idx].f);
 		idx++;
 	}
-/* opcode error */
-	return (opcode_error);
+
+	return (moncode_error);
 }

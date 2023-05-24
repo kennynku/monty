@@ -18,31 +18,35 @@
  * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO Holberton project
  */
+
 typedef struct stack_s
 {
 	int n;
 	struct stack_s *prev;
 	struct stack_s *next;
 } stack_t;
+
+
 /**
- * struct instruction_s - opcode and its function
- * @opcode: the opcode
- * @f: function to handle the opcode
+ * struct instruction_s - moncode and its function
+ * @moncode: the moncode
+ * @f: function to handle the moncode
  *
- * Description: opcode and its function
+ * Description: moncode and its function
  * for stack, queues, LIFO, FIFO Holberton project
  */
+
 typedef struct instruction_s
 {
-	char *opcode;
+	char *moncode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 /* helper functions */
-void (*get_op_func(char *str))(stack_t **stack, unsigned int line_number);
+void (*get_mon_func(char *str))(stack_t **stack, unsigned int line_number);
 void free_stack(stack_t **stack);
 
-/* opcode functions */
+/* monty functions */
 void mon_push(stack_t **stack, unsigned int line_number);
 void mon_pall(stack_t **stack, unsigned int line_number);
 void mon_pint(stack_t **stack, unsigned int line_number);
@@ -62,8 +66,8 @@ void file_error(void);
 void usage_error(void);
 void malloc_error(stack_t **stack);
 
-/* opcode error handling */
-void opcode_error(stack_t **stack, unsigned int line_number);
+/* monty error handling */
+void moncode_error(stack_t **stack, unsigned int line_number);
 void push_error(stack_t **stack, unsigned int line_number);
 void pint_error(stack_t **stack, unsigned int line_number);
 void pop_error(stack_t **stack, unsigned int line_number);
@@ -82,15 +86,16 @@ void char_error(stack_t **stack, unsigned int line_number);
  * struct stack_val - global shared variables
  * @n: value of new node
  * @file: Monty file being read
- * @opcode: parsed command token
+ * @moncode: parsed command token
  * @qu: switch to queue mode (FIFO) - 0 for off, 1 for on
+ *
  * Description: contains useful information for error handling
  */
 struct stack_val
 {
 	char *n;
 	char *file;
-	char *opcode;
+	char *moncode;
 	int qu;
 } stack_val;
 

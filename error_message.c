@@ -6,13 +6,13 @@
  *@line_number: linumber wear error ocured
  *
  */
-
 void pint_error(stack_t **stack, unsigned int line_number)
 {
 	fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
 	free_stack(stack);
 	exit(EXIT_FAILURE);
 }
+
 /**
  *pop_error-handles error for mon_pop function
  *@stack: a ptr pointing to  a head node
@@ -24,6 +24,7 @@ void pop_error(stack_t **stack, unsigned int line_number)
 	free_stack(stack);
 	exit(EXIT_FAILURE);
 }
+
 /**
  *swap_error-handles error for mon_swap function
  *@stack: a ptr pointing to  a head node
@@ -35,6 +36,7 @@ void swap_error(stack_t **stack, unsigned int line_number)
 	free_stack(stack);
 	exit(EXIT_FAILURE);
 }
+
 /**
  *add_error- handles error for mon_add function
  *@stack: a ptr pointing to  a head node
@@ -46,15 +48,16 @@ void add_error(stack_t **stack, unsigned int line_number)
 	free_stack(stack);
 	exit(EXIT_FAILURE);
 }
+
 /**
- *opcode_error- a function that respond to ivalid instructions
+ *moncode_error- a function that respond to ivalid instructions
  *@stack: a ptr pointing to  a head node
  *@line_number: linumber wear error ocured
  */
-void opcode_error(stack_t **stack, unsigned int line_number)
+void moncode_error(stack_t **stack, unsigned int line_number)
 {
 	fprintf(stderr, "L%d: unknown instruction %s\n",
-		line_number, stack_val.opcode);
+		line_number, stack_val.moncode);
 	free_stack(stack);
 	exit(EXIT_FAILURE);
 }

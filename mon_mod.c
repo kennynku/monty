@@ -5,14 +5,15 @@
  * @head: double pointer to head node
  * @line_number: line number being interpreted from Monty file
  *
- * Description: result is stored in 2nd top element, top element is removed
- * Return: nothing, exit with code EXIT_FAILURE on failure
+ * Description: The result is stored in 2nd top element, top element is removed
+ * Return: nothing
  */
+
 void mon_mod(stack_t **head, unsigned int line_number)
 {
 	int first, second;
 
-	if (!head || !*head || !(*head)->next) /* short stack error */
+	if (!head || !*head || !(*head)->next)
 		mod_error(head, line_number);
 	if ((*head)->n == 0)
 		zero_error(head, line_number);
