@@ -5,7 +5,7 @@
  *
  * Return: ptr to the desired function otherwise moncode_error
  */
- 
+
 void (*get_mon_func(char *str))(stack_t **, unsigned int)
 {
 	instruction_t instructions[] = {

@@ -4,11 +4,11 @@
  * mon_div - divides the values from the top two elements of the stack
  * @head: double pointer to head node
  * @line_number: line number being intrepreted from Monty file
- * 
+ *
  * Description: The result is stored in 2nd top element, top element is removed
  * Return: nothing
  */
- 
+
 void mon_div(stack_t **head, unsigned int line_number)
 {
 	int first, second;

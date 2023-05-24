@@ -25,7 +25,7 @@ int main(int argc, char **argv)
 	stack_val.file = argv[1];
 	file_ptr = fopen(stack_val.file, "r");
 	if (!file_ptr)
-	
+
 	/* file open error */
 		file_error();
 
