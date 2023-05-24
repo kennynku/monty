@@ -2,7 +2,7 @@
 
 
 /**
- * div_error - handles error for op_div function
+ * div_error - handles error for mon_div function
  * @stack: a  pointer to head node
  * @line_number: line number where error occured
  *
@@ -16,7 +16,7 @@ void div_error(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * zero_error -  handles the zerro erro for op_div function program
+ * zero_error -  handles the zerro erro for mon_div function program
  * @stack: a pointer to head node
  * @line_number: line number where error occured
  *
@@ -28,7 +28,7 @@ void zero_error(stack_t **stack, unsigned int line_number)
 	exit(EXIT_FAILURE);
 }
 /**
- * mul_error - op_mul error handling program
+ * mul_error - mon_mul error handling program
  * @stack: double pointer to head node
  * @line_number: line number where error occured
  *
@@ -41,7 +41,7 @@ void mul_error(stack_t **stack, unsigned int line_number)
 	exit(EXIT_FAILURE);
 }
 /**
- * mod_error - handles error for op_mod function
+ * mod_error - handles error for mon_mod function
  * @stack: a  pointer to head node
  * @line_number: line number where error occured
  *

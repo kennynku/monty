@@ -13,7 +13,7 @@ void char_error(stack_t **stack, unsigned int line_number)
 	exit(EXIT_FAILURE);
 }
 /**
- *sub_error- handles error for op_sub
+ *sub_error- handles error for mon_sub
  *@stack: a ptr to head node
  *@line_number: a line wear error occured
  */

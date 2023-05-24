@@ -43,18 +43,18 @@ void (*get_op_func(char *str))(stack_t **stack, unsigned int line_number);
 void free_stack(stack_t **stack);
 
 /* opcode functions */
-void op_push(stack_t **stack, unsigned int line_number);
-void op_pall(stack_t **stack, unsigned int line_number);
-void op_pint(stack_t **stack, unsigned int line_number);
-void op_pop(stack_t **stack, unsigned int line_number);
-void op_swap(stack_t **stack, unsigned int line_number);
-void op_add(stack_t **stack, unsigned int line_number);
-void op_nop(stack_t **stack, unsigned int line_number);
-void op_sub(stack_t **stack, unsigned int line_number);
-void op_div(stack_t **stack, unsigned int line_number);
-void op_mul(stack_t **stack, unsigned int line_number);
-void op_mod(stack_t **stack, unsigned int line_number);
-void op_pchar(stack_t **stack, unsigned int line_number);
+void mon_push(stack_t **stack, unsigned int line_number);
+void mon_pall(stack_t **stack, unsigned int line_number);
+void mon_pint(stack_t **stack, unsigned int line_number);
+void mon_pop(stack_t **stack, unsigned int line_number);
+void mon_swap(stack_t **stack, unsigned int line_number);
+void mon_add(stack_t **stack, unsigned int line_number);
+void mon_nop(stack_t **stack, unsigned int line_number);
+void mon_sub(stack_t **stack, unsigned int line_number);
+void mon_div(stack_t **stack, unsigned int line_number);
+void mon_mul(stack_t **stack, unsigned int line_number);
+void mon_mod(stack_t **stack, unsigned int line_number);
+void mon_pchar(stack_t **stack, unsigned int line_number);
 
 
 /* error handling functions */

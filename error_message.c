@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- *pint_error- op_pint error handling function
+ *pint_error- mon_pint error handling function
  *@stack: a ptr pointing to  a head node
  *@line_number: linumber wear error ocured
  *
@@ -14,7 +14,7 @@ void pint_error(stack_t **stack, unsigned int line_number)
 	exit(EXIT_FAILURE);
 }
 /**
- *pop_error-handles error for op_pop function
+ *pop_error-handles error for mon_pop function
  *@stack: a ptr pointing to  a head node
  *@line_number: linumber wear error ocured
  */
@@ -25,7 +25,7 @@ void pop_error(stack_t **stack, unsigned int line_number)
 	exit(EXIT_FAILURE);
 }
 /**
- *swap_error-handles error for op_swap function
+ *swap_error-handles error for mon_swap function
  *@stack: a ptr pointing to  a head node
  *@line_number: linumber wear error ocured
  */
@@ -36,7 +36,7 @@ void swap_error(stack_t **stack, unsigned int line_number)
 	exit(EXIT_FAILURE);
 }
 /**
- *add_error- handles error for op_add function
+ *add_error- handles error for mon_add function
  *@stack: a ptr pointing to  a head node
  *@line_number: linumber wear error ocured
  */

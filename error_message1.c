@@ -28,7 +28,7 @@ void malloc_error(stack_t **stack)
 	exit(EXIT_FAILURE);
 }
 /**
- *push_error-handles syntax error for op_push function
+ *push_error-handles syntax error for mon_push function
  *@stack: a ptr to head node
  *@line_number: linenumber  wear error ocured
  */

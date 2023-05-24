@@ -1,12 +1,12 @@
 #include "monty.h"
 /**
- * op_push - pushes a value to the top of the stack
+ * mon_push - pushes a value to the top of the stack
  * @head: A pointer to head node
  * @line_number: line number where opcode was encountered
  *
  * Return: nothing, exit with code EXIT_FAILURE on failure
  */
-void op_push(stack_t **head, unsigned int line_number)
+void mon_push(stack_t **head, unsigned int line_number)
 {
 	stack_t *new_node = NULL, *tail = NULL;
 	size_t idx = 0;
